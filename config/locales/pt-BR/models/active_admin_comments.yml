@@ -1,0 +1,39 @@
+pt-BR:
+  activerecord:
+    models:
+      comment:
+        one: Nota
+        other: Notas
+      active_admin/comment:
+        one: Nota
+        other: Notas
+    attributes:
+      comment:
+        resource_type: Tipo de Objeto
+        author_type: Tipo de Autor
+        body: Conteúdo
+        author: Autor
+        add: Adicionar nota
+        delete: Deletar nota
+        delete_confirmation: Tem certeza que deseja excluir esta nota?
+        resource: Objeto
+        no_comments_yet: Nenhuma nota.
+        author_missing: Anônimo
+        title_content: "Notas: %{count}"
+        errors:
+          empty_text: A nota não foi salvo porque o texto estava vazio.
+      active_admin/comment:
+        created_at: Criado em
+        resource_type: Tipo de Objeto
+        author_type: Tipo de Autor
+        body: Conteúdo
+        author: Autor
+        add: Adicionar nota
+        delete: Deletar nota
+        delete_confirmation: Tem certeza que deseja excluir esta nota?
+        resource: Objeto
+        no_comments_yet: Nenhuma nota.
+        author_missing: Anônimo
+        title_content: "Notas: %{count}"
+        errors:
+          empty_text: A nota não foi salvo porque o texto estava vazio.
