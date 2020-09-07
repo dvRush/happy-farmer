@@ -38,3 +38,6 @@ docker-compose.yml
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# RSpec
+.rspec
