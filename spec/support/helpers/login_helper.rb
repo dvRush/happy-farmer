@@ -1,7 +1,7 @@
 module Helpers
   def sign_in(admin = nil, password = nil)
     admin ||= create(:admin)
-    password ||= "password"
+    password ||= admin.password || "password"
 
     visit admin_root_path
 
