@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      breed:
+        one: Raça
+        other: Raças
+    attributes:
+      breed:
+        name: Nome
+        type: Tipo

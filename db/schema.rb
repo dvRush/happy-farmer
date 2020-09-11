@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_06_224504) do
+ActiveRecord::Schema.define(version: 2020_09_06_231559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,4 +41,28 @@ ActiveRecord::Schema.define(version: 2020_09_06_224504) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "animals", force: :cascade do |t|
+    t.string "tag"
+    t.string "genre", limit: 1
+    t.date "birth_date"
+    t.bigint "breed_id"
+    t.bigint "father_id"
+    t.bigint "mother_id"
+    t.string "type", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["breed_id"], name: "index_animals_on_breed_id"
+    t.index ["father_id"], name: "index_animals_on_father_id"
+    t.index ["mother_id"], name: "index_animals_on_mother_id"
+  end
+
+  create_table "breeds", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "animal_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "animals", "animals", column: "father_id"
+  add_foreign_key "animals", "animals", column: "mother_id"
 end

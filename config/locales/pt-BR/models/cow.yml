@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      cow:
+        one: Vaca
+        other: Gado
+    attributes:
+      cow:
+        tag: Etiqueta
+        genre: Sexo
+        birth_date: Data de nascimento
+        breed: Raça
+        father: Pai
+        father_id: Pai
+        mother: Mãe
+        mother_id: Mãe
