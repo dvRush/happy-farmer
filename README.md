@@ -1,3 +1,5 @@
+[![Build Status](https://drone.rafaelbelo.com.br/api/badges/dvRush/happy-farmer/status.svg)](https://drone.rafaelbelo.com.br/dvRush/happy-farmer)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
