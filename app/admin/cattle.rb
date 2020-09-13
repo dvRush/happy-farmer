@@ -6,8 +6,8 @@ ActiveAdmin.register Cow do
   permit_params :tag, :genre, :birth_date, :breed_id
 
   filter :tag
-  filter :breed, as: :select, collection: Breed.cow.order(name: :asc)
-  filter :genre, as: :select, collection: Cow.genre_as_options
+  filter :breed, as: :select, collection: proc { Breed.cow.order(name: :asc) }
+  filter :genre, as: :select, collection: proc { Cow.genre_as_options }
   filter :birth_date
 
   index do
