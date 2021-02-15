@@ -37,6 +37,18 @@ ActiveAdmin.register Cow do
       row :birth_date
     end
 
+    panel Insemination.model_name.human(count: 2) do
+      table_for cow.inseminations.order(inseminated_at: :desc), i18n: Insemination do
+        column Insemination.human_attribute_name(:inseminated_at), :inseminated_at
+        column do |insemination|
+          link_to I18n.t("view", scope: "active_admin"), admin_insemination_path(insemination)
+        end
+      end
+
+      h4 "Nova inseminação"
+      render partial: "new_insemination"
+    end
+
     active_admin_comments
   end
 end

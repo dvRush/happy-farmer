@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      insemination:
+        one: Inseminação
+        other: Inseminações
+    attributes:
+      insemination:
+        inseminated_at: Inseminado em
+        animal: Animal
+        animal_id: Animal (ID)
