@@ -7,4 +7,4 @@ pt-BR:
     attributes:
       breed:
         name: Nome
-        type: Tipo
+        animal_type: Tipo de animal
