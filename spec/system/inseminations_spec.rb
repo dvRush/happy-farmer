@@ -8,7 +8,7 @@ describe Insemination, type: :system do
     visit "/admin"
   end
 
-  context "cow", js: true do
+  context "cow" do
     let!(:cow_01) { create(:cow, tag: "C-01") }
 
     scenario "registers a new insemination" do
